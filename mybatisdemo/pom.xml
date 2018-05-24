@@ -5,37 +5,30 @@
     <artifactId>springdemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>jpademo</artifactId>
+  
+  <artifactId>mybatisdemo</artifactId>
   
   <properties>
-  	<spring.data.jpa.Version>1.3.2.RELEASE</spring.data.jpa.Version>
-  	<org.hibernate.version>4.0.1.Final</org.hibernate.version>
+  	<mybatis.spring.boot.version>1.3.1</mybatis.spring.boot.version>
+  	<pagehelper.version>1.2.3</pagehelper.version>
   	<mysql.version>5.1.6</mysql.version>
   	<dbcp.version>2.1.1</dbcp.version>
   </properties>
   
   <dependencies>
   	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-context</artifactId>
-	</dependency>
-	
-	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-orm</artifactId>
-	    <version>${spring.version}</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.springframework.data</groupId>
-	    <artifactId>spring-data-jpa</artifactId>
-	    <version>${spring.data.jpa.Version}</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.hibernate</groupId>
-	    <artifactId>hibernate-entitymanager</artifactId>
-	    <version>${org.hibernate.version}</version>
-	</dependency>
-	<dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>${mybatis.spring.boot.version}</version>
+    </dependency>
+  
+  	<dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper-spring-boot-starter</artifactId>
+        <version>${pagehelper.version}</version>
+    </dependency>
+    
+  	<dependency>
 	    <groupId>mysql</groupId>
 	    <artifactId>mysql-connector-java</artifactId>
 	    <version>${mysql.version}</version>
@@ -66,4 +59,5 @@
 	    <scope>test</scope>
 	</dependency>
   </dependencies>
+  
 </project>

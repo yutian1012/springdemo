@@ -40,7 +40,7 @@ public class User implements Serializable {
     @OneToOne(optional=true,cascade=CascadeType.PERSIST,fetch=FetchType.LAZY)
     @JoinColumn(name="account_id")
     private Account account;
-    @OneToMany(cascade=CascadeType.REMOVE,fetch=FetchType.LAZY)
+    @OneToMany(cascade=CascadeType.REMOVE,fetch=FetchType.EAGER)
     @JoinColumn(name="user_id")
     private List<Address> addressList;
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import spittr.domain.Spitter;
 
@@ -19,5 +20,11 @@ public interface SpitterRepository extends JpaRepository<Spitter, Long> ,Spitter
 	
 	@Query("select p from Spitter as p where p.username=?1")
 	Spitter findSpitterByUsernameInfo(String username);
+	
+	@Query("select p from Spitter as p where p.username=:username")
+	Spitter findSpitterByUsernameParamName(@Param("username")String username);
+	
+	@Query("select p from Spitter as p where p.username in (?1)")
+	List<Spitter> findSpitterListByUserName(List<String> username);
 
 }
