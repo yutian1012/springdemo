@@ -26,5 +26,11 @@ public interface SpitterRepository extends JpaRepository<Spitter, Long> ,Spitter
 	
 	@Query("select p from Spitter as p where p.username in (?1)")
 	List<Spitter> findSpitterListByUserName(List<String> username);
+	
+	@Query("select p.username from Spitter as p ")
+	List<Object> findUserNameList();
+	
+	@Query("select p.id,p.username from Spitter as p ")
+	List<Object[]> findUserNameAndIdList();
 
 }
