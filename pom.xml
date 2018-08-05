@@ -7,6 +7,7 @@
   <modules>
   	<module>jpademo</module>
   	<module>mybatisdemo</module>
+  	<module>beandemo</module>
   </modules>
   
   <properties>
