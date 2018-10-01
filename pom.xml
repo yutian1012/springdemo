@@ -8,6 +8,7 @@
   	<module>jpademo</module>
   	<module>mybatisdemo</module>
   	<module>beandemo</module>
+  	<module>springmvcdemo</module>
   </modules>
   
   <properties>
